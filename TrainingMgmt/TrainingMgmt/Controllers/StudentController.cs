@@ -48,7 +48,7 @@ namespace TrainingMgmt.Controllers
         }
 
         [HttpDelete]
-        [Route("Update")]
+        [Route("Delete")]
         public bool Update(int id)
         {
             return studentRepository.Delete(id);

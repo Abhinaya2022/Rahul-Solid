@@ -15,10 +15,10 @@ namespace TrainingMgmt.API.Tests
         {
             Student s = new()
             {
-                Name = "Ravi",
-                PhoneNumber = "9999",
+                Name = "Rahul",
+                PhoneNumber = "22332",
                 City = "Hyderabad",
-                Mail = "R@G.COM"
+                Mail = "rahul@gmail.COM"
             };
             Mock<IStudentRepository> mockRepository = new Mock<IStudentRepository>();
             mockRepository.Setup(x => x.Add(s)).Returns
