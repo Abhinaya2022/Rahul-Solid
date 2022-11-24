@@ -12,7 +12,7 @@ namespace TrainingMgmt.Repositories.Implementation
     {
         public Student Add(Student student)
         {
-            ABCTrainingContext context = new ABCTrainingContext();
+            ManagementContext context = new ManagementContext();
             context.Students.Add(student);
             context.SaveChanges();
             return student;
@@ -20,19 +20,19 @@ namespace TrainingMgmt.Repositories.Implementation
 
         public Student GetById(int id)
         {
-            ABCTrainingContext context = new ABCTrainingContext();
+            ManagementContext context = new ManagementContext();
             return context.Students.Find(id);
         }
 
         public List<Student> GetList()
         {
-            ABCTrainingContext context = new ABCTrainingContext();
+            ManagementContext context = new ManagementContext();
             return context.Students.ToList();
         }
 
         public Student Update(Student student)
         {
-            ABCTrainingContext context = new ABCTrainingContext();
+            ManagementContext context = new ManagementContext();
             context.Students.Update(student);
             context.SaveChanges();
             return student;
@@ -40,7 +40,7 @@ namespace TrainingMgmt.Repositories.Implementation
 
         public bool Delete(int id)
         {
-            ABCTrainingContext context = new ABCTrainingContext();
+            ManagementContext context = new ManagementContext();
             Student student = context.Students.Find(id);
             context.Students.Remove(student);
             context.SaveChanges();
