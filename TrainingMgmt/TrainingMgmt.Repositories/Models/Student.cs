@@ -15,7 +15,7 @@ namespace TrainingMgmt.Repositories.Models
         public int Id { get; set; }
         public string Name { get; set; }
         public string PhoneNumber { get; set; }
-        public string Mail { get; set; }
+        public string Gmail { get; set; }
         public string City { get; set; }
 
         public virtual ICollection<StudentCourse> StudentCourses { get; set; }
